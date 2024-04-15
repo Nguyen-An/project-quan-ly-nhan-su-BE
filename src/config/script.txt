@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS hrm_manager;
+
+USE hrm_manager;
+
+CREATE TABLE IF NOT EXISTS account (
+    accountId INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255)
+);
+
