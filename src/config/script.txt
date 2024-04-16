@@ -9,3 +9,44 @@ CREATE TABLE IF NOT EXISTS account (
     password VARCHAR(255)
 );
 
+INSERT INTO account(name, email, password)
+VALUES ('Nguyen Van An', 'vanan6@gmail.com','123456'),
+('Do Thi Linh', 'linhdo@gmail.com','123456');
+
+
+
+CREATE TABLE IF NOT EXISTS employee (
+    employeeId INT AUTO_INCREMENT PRIMARY KEY,
+    userName VARCHAR(255),
+    userCode VARCHAR(255),
+    gender VARCHAR(255),
+    dateOfBirth varchar(255),
+    phone varchar(255),
+    address varchar(255),
+    email varchar(255),
+    identityCard varchar(255),
+    status varchar(255),
+    position varchar(255),
+    laborContract varchar(255),
+    salary varchar(255),
+    dateEnd varchar(255),
+    dateStart varchar(255)
+);
+
+INSERT INTO employee(userName, userCode, gender, dateOfBirth, phone, address, email, identityCard, status, position, laborContract, salary, dateEnd, dateStart)
+VALUES ('Nguyễn Văn An', 'NV001', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','nguyenvana@example.com','123456789','working','director','LD001','10000000','01/01/2022','01/01/2010'),
+       ('Trần Thị B', 'NV002', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','tranthi@example.com','123456789','onLeave','manager','LD002','25000000','','01/01/2010'),
+       ('Ngô Hữu Mạnh Khanh', 'NV003', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','khanhngo@example.com','123456789','working','employee','LD001','15000000','01/01/2022','01/01/2010'),
+       ('Nguyễn Hoàng Minh', 'NV004', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','minhnguyen@example.com','123456789','onLeave','employee','LD002','13000000','','01/01/2010'),
+       ('Nguyễn Văn An', 'NV005', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','mnly@example.com','123456789','working','employee','LD001','11000000','01/01/2022','01/01/2010'),
+       ('Vũ Văn Đức', 'NV006', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','ducvu@example.com','123456789','onLeave','employee','LD002','15400000','','01/01/2010'),
+       ('Nguyễn Lam Phương', 'NV007', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','phunglam@example.com','123456789','working','employee','LD001','32000000','01/01/2022','01/01/2010'),
+       ('Ngô Thanh Phong', 'NV008', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','nguyenvana@example.com','123456789','onLeave','employee','LD002','1300000','','01/01/2010'),
+       ('Võ Nhật Yên', 'NV009', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','thanh phong@example.com','123456789','working','employee','LD001','20000000','01/01/2022','01/01/2010'),
+       ('Nguyễn Tam Giang', 'NV010', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','giangnguyen@example.com','123456789','onLeave','employee','LD002','13000000','','01/01/2010'),
+       ('Nguyễn Văn Đẳng', 'NV011', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','dangnguyen@example.com','123456789','working','employee','LD001','10000000','01/01/2022','01/01/2010'),
+       ('Văn Công Tấn Phát', 'NV012', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','phatvan@example.com','123456789','onLeave','employee','LD002','15000000','','01/01/2010'),
+       ('Ngô Thanh Phong', 'NV013', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','phongngo@example.com','123456789','working','employee','LD001','12000000','01/01/2022','01/01/2010'),
+       ('Võ Anh Hào', 'NV014', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','anhhao@example.com','123456789','onLeave','employee','LD002','15000000','','01/01/2010'),
+       ('Nguyễn Anh Thoại', 'NV015', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','thoat@example.com','123456789','working','employee','LD001','10000000','01/01/2022','01/01/2010'),
+       ('Nguyễn Hữu Nhật Chiêu', 'NV016', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','chieuuuu@example.com','123456789','onLeave','employee','LD002','15000000','','01/01/2010');
