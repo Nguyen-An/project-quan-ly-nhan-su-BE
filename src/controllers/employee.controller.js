@@ -19,6 +19,8 @@ const PostEmployeeRequest = {
 
 getListController = async (req, res) => { 
     try {
+        console.log(req.query.keywords);
+
         let data = await EmnployeeBL.getListEmployeeBL();
 
         if (data) {
