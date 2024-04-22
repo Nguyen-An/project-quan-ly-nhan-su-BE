@@ -1,9 +1,9 @@
 const Employee = require('../models/employee.model')
 
-getListEmployeeBL = async () => {
+getListEmployeeBL = async (keywords) => {
     return new Promise(async (resolve, reject) => {
         try {
-            let employee = await Employee.getList();
+            let employee = await Employee.getList(keywords);
             resolve(employee)
         } catch (error) {
             reject(error)

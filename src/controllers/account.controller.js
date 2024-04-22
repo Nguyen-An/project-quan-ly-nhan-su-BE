@@ -23,9 +23,9 @@ let getTokenController = async (req, res) => {
                 return res.status(400).json({ message: 'Tài khoản, mật khẩu không chính xác!' });
             } else if (checkAccount.length == 1) {
                 let _token = await JWT.make({ id: checkAccount.id, username: checkAccount.username })
-                
                 return res.status(200).json({
                     token: _token,
+                    accountname: checkAccount[0].name,
                     message: 'Thành công!'
                 })
             } else {

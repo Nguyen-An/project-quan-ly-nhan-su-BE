@@ -19,9 +19,8 @@ const PostEmployeeRequest = {
 
 getListController = async (req, res) => { 
     try {
-        console.log(req.query.keywords);
-
-        let data = await EmnployeeBL.getListEmployeeBL();
+        let keywords = req.query.keywords;
+        let data = await EmnployeeBL.getListEmployeeBL(keywords);
 
         if (data) {
             return res.status(200).json(

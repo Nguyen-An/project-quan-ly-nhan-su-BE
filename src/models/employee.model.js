@@ -4,9 +4,12 @@ const Emnployee = (emnployee) => {
 
 }
 
-Emnployee.getList = () => {
+Emnployee.getList = (keywords) => {
+    if(!keywords) keywords = "";
+    keywords = keywords.trim();
+    keywords = `%${keywords}%`
     return new Promise((resolve, reject) => {
-        db.query("SELECT * FROM employee;", (err, result) => {
+        db.query("SELECT * FROM employee WHERE userName like ?;", [keywords], (err, result) => {
             if (err) reject(null)
             resolve(result)
         })
