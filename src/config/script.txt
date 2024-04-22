@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS hrm_manager;
+
 CREATE DATABASE IF NOT EXISTS hrm_manager;
 
 USE hrm_manager;
@@ -34,19 +36,19 @@ CREATE TABLE IF NOT EXISTS employee (
 );
 
 INSERT INTO employee(userName, userCode, gender, dateOfBirth, phone, address, email, identityCard, status, position, laborContract, salary, dateEnd, dateStart)
-VALUES ('Nguyễn Văn An', 'NV001', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','nguyenvana@example.com','123456789','working','director','LD001','10000000','01/01/2022','01/01/2010'),
-       ('Trần Thị B', 'NV002', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','tranthi@example.com','123456789','onLeave','manager','LD002','25000000','','01/01/2010'),
-       ('Ngô Hữu Mạnh Khanh', 'NV003', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','khanhngo@example.com','123456789','working','employee','LD001','15000000','01/01/2022','01/01/2010'),
-       ('Nguyễn Hoàng Minh', 'NV004', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','minhnguyen@example.com','123456789','onLeave','employee','LD002','13000000','','01/01/2010'),
-       ('Nguyễn Văn An', 'NV005', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','mnly@example.com','123456789','working','employee','LD001','11000000','01/01/2022','01/01/2010'),
-       ('Vũ Văn Đức', 'NV006', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','ducvu@example.com','123456789','onLeave','employee','LD002','15400000','','01/01/2010'),
-       ('Nguyễn Lam Phương', 'NV007', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','phunglam@example.com','123456789','working','employee','LD001','32000000','01/01/2022','01/01/2010'),
-       ('Ngô Thanh Phong', 'NV008', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','nguyenvana@example.com','123456789','onLeave','employee','LD002','1300000','','01/01/2010'),
-       ('Võ Nhật Yên', 'NV009', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','thanh phong@example.com','123456789','working','employee','LD001','20000000','01/01/2022','01/01/2010'),
-       ('Nguyễn Tam Giang', 'NV010', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','giangnguyen@example.com','123456789','onLeave','employee','LD002','13000000','','01/01/2010'),
-       ('Nguyễn Văn Đẳng', 'NV011', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','dangnguyen@example.com','123456789','working','employee','LD001','10000000','01/01/2022','01/01/2010'),
-       ('Văn Công Tấn Phát', 'NV012', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','phatvan@example.com','123456789','onLeave','employee','LD002','15000000','','01/01/2010'),
-       ('Ngô Thanh Phong', 'NV013', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','phongngo@example.com','123456789','working','employee','LD001','12000000','01/01/2022','01/01/2010'),
-       ('Võ Anh Hào', 'NV014', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','anhhao@example.com','123456789','onLeave','employee','LD002','15000000','','01/01/2010'),
-       ('Nguyễn Anh Thoại', 'NV015', '0', '01/01/1990', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','thoat@example.com','123456789','working','employee','LD001','10000000','01/01/2022','01/01/2010'),
-       ('Nguyễn Hữu Nhật Chiêu', 'NV016', '1', '01/01/1995', '0987654321', '123 Đường ABC, Quận XYZ, TP HCM','chieuuuu@example.com','123456789','onLeave','employee','LD002','15000000','','01/01/2010');
+VALUES ('Nguyễn Văn An', 'NV1', '0', '01/01/1990', '0987654321', 'Xã Trà Vinh, Huyện Nam Trà My, Quảng Nam','nguyenvana@example.com','234245345345','working','director','LD001','10000000','01/01/2022','01/01/2010'),
+       ('Trần Thị B', 'NV2', '1', '01/01/1995', '08457823423', 'Xã Phú Lương, Huyện Lương Tài, Bắc Ninh','tranthi@example.com','235434623456','onLeave','manager','LD002','25000000','','01/01/2010'),
+       ('Ngô Hữu Mạnh Khanh', 'NV3', '0', '01/01/1990', '0374582334', 'Phường 10, Thành phố Vũng Tàu, Bà Rịa - Vũng Tàu','khanhngo@example.com','234624572345','working','employee','LD001','15000000','01/01/2022','01/01/2010'),
+       ('Nguyễn Hoàng Minh', 'NV4', '1', '01/01/1995', '0347532453', 'Xã Hồng Phong, Huyện Cao Lộc, Lạng Sơn','minhnguyen@example.com','845672345623','onLeave','employee','LD002','13000000','','01/01/2010'),
+       ('Nguyễn Văn An', 'NV5', '0', '01/01/1990', '0374582334', '	Xã Thông Nguyên, Huyện Hoàng Su Phì, Hà Giang','mnly@example.com','2342352343','working','employee','LD001','11000000','01/01/2022','01/01/2010'),
+       ('Vũ Văn Đức', 'NV6', '1', '01/01/1995', '03784652341', '	Xã Vĩnh Long, Huyện Vĩnh Linh, Quảng Trị','ducvu@example.com','464576347123','onLeave','employee','LD002','15400000','','01/01/2010'),
+       ('Nguyễn Lam Phương', 'NV7', '0', '01/01/1990', '0278348762', '	Xã Thanh Tương, Huyện Nà Hang, Tuyên Quang','phunglam@example.com','345623461234','working','employee','LD001','32000000','01/01/2022','01/01/2010'),
+       ('Ngô Thanh Phong', 'NV8', '1', '01/01/1995', '09372187346', 'Phường Long Phước, Thị xã Phước Long, Bình Phước','nguyenvana@example.com','234343457656','onLeave','employee','LD002','1300000','','01/01/2010'),
+       ('Võ Nhật Yên', 'NV9', '0', '01/01/1990', '057462342', 'Phường 4, Thành phố Đà Lạt, Lâm Đồng','thanh phong@example.com','278458234567','working','employee','LD001','20000000','01/01/2022','01/01/2010'),
+       ('Nguyễn Tam Giang', 'NV10', '1', '01/01/1995', '02374616234', 'Xã Ea Nuôl, Huyện Buôn Đôn, Đắc Lắc','giangnguyen@example.com','452836475123','onLeave','employee','LD002','13000000','','01/01/2010'),
+       ('Nguyễn Văn Đẳng', 'NV11', '0', '01/01/1990', '02376472334', '	Xã Long Hựu Đông, Huyện Cần Đước, Long An','dangnguyen@example.com','213462345723','working','employee','LD001','10000000','01/01/2022','01/01/2010'),
+       ('Văn Công Tấn Phát', 'NV12', '1', '01/01/1995', '02374623423', '	Xã Suối Kiết, Huyện Tánh Linh, Bình Thuận','phatvan@example.com','231465234573','resigned','employee','LD002','15000000','','01/01/2010'),
+       ('Ngô Thanh Phong', 'NV13', '0', '01/01/1990', '0237642364', '	Xã Mai Phụ, Huyện Lộc Hà, Hà Tĩnh','phongngo@example.com','412346245762','working','employee','LD001','12000000','01/01/2022','01/01/2010'),
+       ('Võ Anh Hào', 'NV14', '1', '01/01/1995', '0347657384', '	Xã Phước Đại, Huyện Bác Ái, Ninh ThuậnM','anhhao@example.com','623456234562','onLeave','employee','LD002','15000000','','01/01/2010'),
+       ('Nguyễn Anh Thoại', 'NV15', '0', '01/01/1990', '0273647234', '	Phường Xuân Sơn, Thị xã Đông Triều, Quảng Ninh','thoat@example.com','412346245762','working','employee','LD001','10000000','01/01/2022','01/01/2010'),
+       ('Nguyễn Hữu Nhật Chiêu', 'NV16', '1', '01/01/1995', '02734672343', '	Xã Tân Văn, Huyện Lâm Hà, Lâm Đồng','chieuuuu@example.com','523462345734','resigned','employee','LD002','15000000','','01/01/2010');
