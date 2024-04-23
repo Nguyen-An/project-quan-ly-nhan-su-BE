@@ -9,25 +9,12 @@ Emnployee.getList = async (keywords) => {
     keywords = keywords.trim();
     keywords = `%${keywords}%`
     return new Promise((resolve, reject) => {
-        db.query("SELECT * FROM employee WHERE userName like ?;", [keywords], (err, result) => {
+        db.query("SELECT * FROM employee WHERE userName like ? or userCode like ?;", [keywords, keywords], (err, result) => {
             if (err) reject(null)
             resolve(result)
         })
     })
 }
-
-// Emnployee.postEmployee =  (emp) => {
-//     return new Promise((resolve, reject) => {
-//         db.query("INSERT INTO employee(userName, userCode, gender, dateOfBirth, phone, address, email, identityCard, status, position, laborContract, salary, dateEnd, dateStart) VALUES (?, ?, ?, ?, ?, ? , ? , ? , ? , ? , ? , ? , ? , ?);",
-//             [emp.userName, emp.userCode, emp.gender, emp.dateOfBirth, emp.phone, emp.address, emp.email, emp.identityCard, emp.status, emp.position, emp.laborContract, emp.salary, emp.dateEnd, emp.dateStart], (err, result) => {
-//                 if (err) {
-//                     console.log('err: ', err);
-//                     reject(null)
-//                 }
-//                 resolve(result)
-//             })
-//     })
-// }
 
 Emnployee.postEmployee = (emp) => {
     return new Promise((resolve, reject) => { 
